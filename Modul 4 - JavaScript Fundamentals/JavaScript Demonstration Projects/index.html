@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Demonstration Projects</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: #667eea;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        font-size: 1.3rem;
+        color: #666;
+        margin-bottom: 40px;
+      }
+
+      .description {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 50px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+        margin: 50px 0;
+      }
+
+      .project-card {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 3px solid transparent;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .static-project {
+        border-color: #ff6b6b;
+      }
+
+      .interactive-project {
+        border-color: #4facfe;
+      }
+
+      .project-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+      }
+
+      .project-title {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .project-description {
+        color: #666;
+        margin-bottom: 25px;
+        line-height: 1.6;
+      }
+
+      .features-list {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      .features-list li {
+        margin: 8px 0;
+        padding: 5px 0;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-static {
+        background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      }
+
+      .btn-interactive {
+        background: linear-gradient(45deg, #4facfe, #00f2fe);
+        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+      }
+
+      .comparison {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 40px;
+        border-radius: 15px;
+        margin: 50px 0;
+      }
+
+      .comparison h3 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .comparison-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+      }
+
+      .comparison-item h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .comparison-item ul {
+        list-style: none;
+      }
+
+      .comparison-item li {
+        padding: 5px 0;
+        font-size: 1rem;
+      }
+
+      .footer {
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 2px solid #667eea;
+        color: #666;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .project-card {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🚀 JavaScript Demonstration Projects</h1>
+      <p class="subtitle">
+        Perbandingan Website Tanpa JavaScript vs Dengan JavaScript
+      </p>
+
+      <div class="description">
+        <p>
+          Demonstrasi ini menunjukkan perbedaan yang signifikan antara website
+          statis (tanpa JavaScript) dan website interaktif (dengan JavaScript).
+          Jelajahi kedua proyek untuk memahami mengapa JavaScript sangat penting
+          dalam pengembangan web modern.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Static Project -->
+        <div class="project-card static-project">
+          <div class="project-icon">🌐</div>
+          <h3 class="project-title">Website Statis</h3>
+          <p class="project-description">
+            Website yang dibuat hanya dengan HTML dan CSS, tanpa JavaScript.
+            Demonstrasi keterbatasan website tanpa interaktivitas.
+          </p>
+
+          <ul class="features-list">
+            <li>❌ Tombol tidak berfungsi</li>
+            <li>❌ Form tanpa validasi</li>
+            <li>❌ Tidak ada animasi interaktif</li>
+            <li>❌ Tidak ada feedback untuk pengguna</li>
+            <li>❌ Konten statis dan tidak berubah</li>
+          </ul>
+
+          <a href="1. Static Website/index.html" class="btn btn-static"
+            >Buka Website Statis</a
+          >
+        </div>
+
+        <!-- Interactive Project -->
+        <div class="project-card interactive-project">
+          <div class="project-icon">⚡</div>
+          <h3 class="project-title">Website Interaktif</h3>
+          <p class="project-description">
+            Website yang dibuat dengan HTML, CSS, dan JavaScript. Demonstrasi
+            kekuatan JavaScript dalam membuat website yang hidup dan responsif.
+          </p>
+
+          <ul class="features-list">
+            <li>✅ Tombol berfungsi dengan baik</li>
+            <li>✅ Form dengan validasi real-time</li>
+            <li>✅ Animasi dan transisi smooth</li>
+            <li>✅ Notifikasi dan feedback</li>
+            <li>✅ Konten dinamis dan interaktif</li>
+          </ul>
+
+          <a
+            href="2. Interactive Website/index.html"
+            class="btn btn-interactive"
+            >Buka Website Interaktif</a
+          >
+        </div>
+      </div>
+
+      <div class="comparison">
+        <h3>Perbandingan Fitur</h3>
+        <div class="comparison-grid">
+          <div class="comparison-item">
+            <h4>Website Statis</h4>
+            <ul>
+              <li>❌ Interaksi terbatas</li>
+              <li>❌ Tidak ada validasi form</li>
+              <li>❌ Animasi hanya CSS</li>
+              <li>❌ Tidak ada notifikasi</li>
+              <li>❌ User experience statis</li>
+            </ul>
+          </div>
+          <div class="comparison-item">
+            <h4>Website Interaktif</h4>
+            <ul>
+              <li>✅ Interaksi kaya</li>
+              <li>✅ Validasi form real-time</li>
+              <li>✅ Animasi JavaScript + CSS</li>
+              <li>✅ Notifikasi dan alert</li>
+              <li>✅ User experience dinamis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          <strong>Tujuan Pembelajaran:</strong> Memahami pentingnya JavaScript
+          dalam pengembangan web modern
+        </p>
+        <p>
+          <strong>Kesimpulan:</strong> JavaScript mengubah website dari sekadar
+          tampilan menjadi aplikasi interaktif yang responsif
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

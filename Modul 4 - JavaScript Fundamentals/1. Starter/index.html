@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator - JavaScript Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Age Calculator</h1>
+        <p>Masukkan tanggal lahir Anda untuk menghitung umur</p>
+      </header>
+
+      <main>
+        <div class="calculator">
+          <form id="ageForm">
+            <div class="form-group">
+              <label for="birthDate">Tanggal Lahir:</label>
+              <input type="date" id="birthDate" name="birthDate" required />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Nama (Opsional):</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Masukkan nama Anda"
+              />
+            </div>
+
+            <button type="submit" id="calculateBtn">Hitung Umur</button>
+          </form>
+
+          <div id="result" class="result hidden">
+            <!-- TODO: Hasil kalkulasi akan ditampilkan di sini -->
+          </div>
+        </div>
+
+        <div class="features">
+          <h2>Fitur Kalkulator</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h3>Kalkulasi Otomatis</h3>
+              <p>Hitung umur dalam tahun, bulan, dan hari</p>
+            </div>
+            <div class="feature-card">
+              <h3>Validasi Input</h3>
+              <p>Pastikan tanggal yang dimasukkan valid</p>
+            </div>
+            <div class="feature-card">
+              <h3>Error Handling</h3>
+              <p>Tangani error dengan baik</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- TODO: Tambahkan JavaScript di sini -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Website - Tanpa JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🌐 Website Statis</h1>
+        <p class="subtitle">Tanpa JavaScript - Hanya HTML & CSS</p>
+      </header>
+
+      <main>
+        <section class="hero">
+          <h2>Selamat Datang di Website Statis</h2>
+          <p>
+            Website ini dibuat hanya dengan HTML dan CSS. Tidak ada JavaScript
+            yang membuat website ini interaktif.
+          </p>
+
+          <!-- Tombol yang tidak berfungsi -->
+          <button class="btn btn-primary">
+            Klik Saya (Tidak Akan Berfungsi)
+          </button>
+          <button class="btn btn-secondary">
+            Tombol Lain (Juga Tidak Berfungsi)
+          </button>
+        </section>
+
+        <section class="features">
+          <h3>Fitur yang TIDAK Tersedia:</h3>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">❌</div>
+              <h4>Interaksi Pengguna</h4>
+              <p>Tidak ada respons terhadap klik, hover, atau input pengguna</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">❌</div>
+              <h4>Konten Dinamis</h4>
+              <p>Tidak ada perubahan konten berdasarkan aksi pengguna</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">❌</div>
+              <h4>Notifikasi</h4>
+              <p>Tidak ada popup, alert, atau notifikasi interaktif</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">❌</div>
+              <h4>Validasi Form</h4>
+              <p>Tidak ada validasi real-time untuk input pengguna</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>Form Tanpa Validasi</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nama:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Masukkan nama Anda"
+              />
+              <span class="error-message"
+                >Error: Tidak ada validasi JavaScript</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Masukkan email Anda"
+              />
+              <span class="error-message"
+                >Error: Tidak ada validasi JavaScript</span
+              >
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan:</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tulis pesan Anda"
+              ></textarea>
+              <span class="error-message"
+                >Error: Tidak ada validasi JavaScript</span
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Kirim Pesan (Tidak Akan Berfungsi)
+            </button>
+          </form>
+        </section>
+
+        <section class="comparison">
+          <h3>Perbandingan dengan Website Interaktif</h3>
+          <div class="comparison-grid">
+            <div class="comparison-item">
+              <h4>Website Ini (Statis)</h4>
+              <ul>
+                <li>❌ Tombol tidak berfungsi</li>
+                <li>❌ Form tidak bisa dikirim</li>
+                <li>❌ Tidak ada animasi interaktif</li>
+                <li>❌ Tidak ada feedback untuk pengguna</li>
+                <li>❌ Tidak ada validasi input</li>
+              </ul>
+            </div>
+            <div class="comparison-item">
+              <h4>Website dengan JavaScript</h4>
+              <ul>
+                <li>✅ Tombol berfungsi dengan baik</li>
+                <li>✅ Form bisa dikirim dan divalidasi</li>
+                <li>✅ Animasi dan transisi smooth</li>
+                <li>✅ Feedback real-time untuk pengguna</li>
+                <li>✅ Validasi input otomatis</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2024 Static Website - Tanpa JavaScript</p>
+        <p>
+          Buka
+          <a href="../2. Interactive Website/index.html">Website Interaktif</a>
+          untuk melihat perbedaannya!
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

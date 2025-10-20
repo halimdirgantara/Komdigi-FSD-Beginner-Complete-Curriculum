@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator - JavaScript Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-calculator"></i> Age Calculator</h1>
+        <p>Masukkan tanggal lahir Anda untuk menghitung umur dengan detail</p>
+      </header>
+
+      <main>
+        <div class="calculator">
+          <form id="ageForm">
+            <div class="form-group">
+              <label for="birthDate">
+                <i class="fas fa-calendar-alt"></i>
+                Tanggal Lahir:
+              </label>
+              <input type="date" id="birthDate" name="birthDate" required />
+              <small class="form-help">Pilih tanggal lahir Anda</small>
+            </div>
+
+            <div class="form-group">
+              <label for="name">
+                <i class="fas fa-user"></i>
+                Nama (Opsional):
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Masukkan nama Anda"
+              />
+              <small class="form-help">Nama akan ditampilkan dalam hasil</small>
+            </div>
+
+            <button type="submit" id="calculateBtn" class="btn-primary">
+              <i class="fas fa-calculator"></i>
+              Hitung Umur
+            </button>
+          </form>
+
+          <div id="result" class="result hidden">
+            <div class="result-header">
+              <h2 id="resultTitle">Hasil Kalkulasi</h2>
+              <button id="clearBtn" class="btn-secondary">
+                <i class="fas fa-times"></i>
+                Clear
+              </button>
+            </div>
+
+            <div class="result-content">
+              <div class="age-display">
+                <div class="age-number" id="ageNumber">0</div>
+                <div class="age-label">Tahun</div>
+              </div>
+
+              <div class="age-details">
+                <div class="detail-item">
+                  <span class="detail-label">Total Hari:</span>
+                  <span class="detail-value" id="totalDays">0</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Total Jam:</span>
+                  <span class="detail-value" id="totalHours">0</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Total Menit:</span>
+                  <span class="detail-value" id="totalMinutes">0</span>
+                </div>
+              </div>
+
+              <div class="age-breakdown">
+                <h3>Detail Umur:</h3>
+                <div class="breakdown-grid">
+                  <div class="breakdown-item">
+                    <div class="breakdown-number" id="years">0</div>
+                    <div class="breakdown-label">Tahun</div>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="breakdown-number" id="months">0</div>
+                    <div class="breakdown-label">Bulan</div>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="breakdown-number" id="days">0</div>
+                    <div class="breakdown-label">Hari</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fun-facts" id="funFacts">
+                <h3>Fakta Menarik:</h3>
+                <ul id="factsList">
+                  <!-- Facts will be populated by JavaScript -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="features">
+          <h2>Fitur Kalkulator</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h3>Kalkulasi Otomatis</h3>
+              <p>Hitung umur dalam tahun, bulan, dan hari dengan akurat</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Validasi Input</h3>
+              <p>Pastikan tanggal yang dimasukkan valid dan masuk akal</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <h3>Error Handling</h3>
+              <p>Tangani error dengan baik dan berikan feedback yang jelas</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Detail Lengkap</h3>
+              <p>Tampilkan detail umur dalam berbagai satuan waktu</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="examples">
+          <h2>Cara Penggunaan</h2>
+          <div class="example-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Masukkan Tanggal Lahir</h3>
+                <p>Pilih tanggal lahir Anda menggunakan date picker</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Klik Hitung Umur</h3>
+                <p>Tekan tombol untuk memulai kalkulasi</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Lihat Hasil</h3>
+                <p>Hasil kalkulasi akan ditampilkan dengan detail</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
