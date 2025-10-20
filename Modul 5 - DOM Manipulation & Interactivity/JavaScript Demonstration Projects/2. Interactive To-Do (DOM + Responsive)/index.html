@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive To-Do (DOM + Responsive)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Tambah tugas baru..."
+          required
+        />
+        <button type="submit">Tambah</button>
+      </form>
+
+      <div class="filters" role="tablist" aria-label="Filter todos">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">
+          Semua
+        </button>
+        <button class="filter-btn" data-filter="active" aria-pressed="false">
+          Aktif
+        </button>
+        <button class="filter-btn" data-filter="completed" aria-pressed="false">
+          Selesai
+        </button>
+      </div>
+
+      <ul id="todo-list"></ul>
+
+      <div class="stats" aria-live="polite">
+        <span id="total-count">0</span> total,
+        <span id="active-count">0</span> aktif,
+        <span id="completed-count">0</span> selesai
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List - DOM Manipulation Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-tasks"></i> To-Do List</h1>
+        <p>Kelola tugas Anda dengan mudah dan efisien</p>
+      </header>
+
+      <main>
+        <div class="todo-app">
+          <!-- Add Task Form -->
+          <form id="todoForm" class="todo-form">
+            <div class="input-group">
+              <input
+                type="text"
+                id="todoInput"
+                placeholder="Masukkan tugas baru..."
+                required
+              />
+              <button type="submit" id="addBtn" class="btn-primary">
+                <i class="fas fa-plus"></i>
+                Tambah
+              </button>
+            </div>
+            <div id="errorMessage" class="error-message hidden"></div>
+          </form>
+
+          <!-- Filter Buttons -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              <i class="fas fa-list"></i>
+              Semua
+            </button>
+            <button class="filter-btn" data-filter="active">
+              <i class="fas fa-clock"></i>
+              Aktif
+            </button>
+            <button class="filter-btn" data-filter="completed">
+              <i class="fas fa-check"></i>
+              Selesai
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Cari tugas..."
+              class="search-input"
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+
+          <!-- Todo List -->
+          <div class="todo-list-container">
+            <ul id="todoList" class="todo-list">
+              <!-- Tasks will be added here by JavaScript -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+              <i class="fas fa-clipboard-list"></i>
+              <h3>Tidak ada tugas</h3>
+              <p>Tambahkan tugas pertama Anda untuk memulai</p>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="todo-stats">
+            <div class="stats-info">
+              <span id="taskCount" class="task-count">0 tugas</span>
+              <span id="completedCount" class="completed-count">0 selesai</span>
+            </div>
+            <div class="stats-actions">
+              <button id="clearCompleted" class="btn-secondary">
+                <i class="fas fa-trash"></i>
+                Hapus Selesai
+              </button>
+              <button id="clearAll" class="btn-danger">
+                <i class="fas fa-trash-alt"></i>
+                Hapus Semua
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features">
+          <h2>Fitur To-Do List</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-plus-circle"></i>
+              </div>
+              <h3>Tambah Tugas</h3>
+              <p>Tambahkan tugas baru dengan mudah</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>Mark Selesai</h3>
+              <p>Tandai tugas yang sudah selesai</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-filter"></i>
+              </div>
+              <h3>Filter Tugas</h3>
+              <p>Filter berdasarkan status tugas</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3>Cari Tugas</h3>
+              <p>Cari tugas dengan cepat</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-save"></i>
+              </div>
+              <h3>Auto Save</h3>
+              <p>Data tersimpan otomatis</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Responsive</h3>
+              <p>Bekerja di semua device</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+      <div class="toast-content">
+        <i class="toast-icon"></i>
+        <span class="toast-message"></span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

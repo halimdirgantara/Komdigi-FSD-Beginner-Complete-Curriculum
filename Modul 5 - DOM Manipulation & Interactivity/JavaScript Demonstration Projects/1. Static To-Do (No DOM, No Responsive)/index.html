@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static To-Do (No DOM, No Responsive)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List (Statis)</h1>
+
+      <!-- Form dummy: tidak ada interaktivitas -->
+      <form>
+        <input type="text" placeholder="Tambah tugas baru..." disabled />
+        <button type="button" disabled>Tambah</button>
+      </form>
+
+      <!-- List statis, tidak dapat diubah -->
+      <ul class="todo-list">
+        <li class="todo-item">
+          <span class="todo-text">Belajar konsep DOM</span>
+          <div class="todo-actions">
+            <button disabled>✓</button>
+            <button disabled>×</button>
+          </div>
+        </li>
+        <li class="todo-item completed">
+          <span class="todo-text">Membaca materi Event Listeners</span>
+          <div class="todo-actions">
+            <button disabled>✓</button>
+            <button disabled>×</button>
+          </div>
+        </li>
+        <li class="todo-item">
+          <span class="todo-text">Mencoba localStorage</span>
+          <div class="todo-actions">
+            <button disabled>✓</button>
+            <button disabled>×</button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="stats">
+        <span>3</span> total, <span>2</span> aktif, <span>1</span> selesai
+      </div>
+
+      <p class="note">
+        Ini adalah versi tanpa DOM Manipulation dan tanpa Responsive Design.
+        Semua elemen bersifat statis dan tidak merespons interaksi.
+      </p>
+    </div>
+  </body>
+</html>
