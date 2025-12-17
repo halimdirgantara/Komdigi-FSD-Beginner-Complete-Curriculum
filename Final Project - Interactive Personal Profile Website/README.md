@@ -40,11 +40,19 @@ Final Project - Interactive Personal Profile Website/
 │   ├── index.html                 # Struktur HTML dasar (sudah ada)
 │   ├── styles.css                 # CSS kosong (implementasi Anda)
 │   └── script.js                  # JavaScript kosong (implementasi Anda)
-├── 2. Finished/                   # Target akhir (JANGAN DIPUSH!)
-│   ├── index.html                 # HTML lengkap dengan semua fitur
-│   ├── styles.css                 # CSS lengkap dengan animations
-│   └── script.js                  # JavaScript lengkap dengan functionality
-└── Final Project Guide.md         # Panduan detail (referensi)
+└── README.md                      # Dokumentasi project ini
+```
+
+Catatan: Setelah selesai, struktur project yang professional adalah:
+```
+Project-Root/
+├── index.html                     # File HTML utama
+├── css/
+│   └── styles.css                 # File CSS untuk styling
+├── js/
+│   └── script.js                  # File JavaScript untuk functionality
+├── assets/                        # Folder untuk gambar dan assets
+└── README.md                      # Dokumentasi
 ```
 
 ## Yang Harus Dikerjakan

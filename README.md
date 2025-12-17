@@ -210,7 +210,7 @@ Jika kamu sudah pernah lihat HTML, CSS, atau JavaScript sebelumnya:
 ## Struktur Folder Lengkap
 
 ```
-Komdigi-FSD/
+Komdigi-FSD-Beginner-Complete-Curriculum/
 │
 ├── Modul 2 - HTML Fundamentals/
 │   ├── 1. Starter/          (Mulai coding dari sini)
