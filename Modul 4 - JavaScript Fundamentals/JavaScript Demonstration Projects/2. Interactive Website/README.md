@@ -6,15 +6,15 @@ Website ini dibuat dengan HTML, CSS, dan JavaScript. Demonstrasi ini menunjukkan
 
 ## Fitur yang Tersedia
 
-- ✅ Interaksi pengguna yang responsif
-- ✅ Konten dinamis yang berubah
-- ✅ Notifikasi dan toast messages
-- ✅ Validasi form real-time
-- ✅ Animasi dan transisi smooth
-- ✅ Demo interaktif (counter, color changer, text animator)
-- ✅ Keyboard shortcuts
-- ✅ Loading states
-- ✅ Error handling
+- Interaksi pengguna yang responsif
+- Konten dinamis yang berubah
+- Notifikasi dan toast messages
+- Validasi form real-time
+- Animasi dan transisi smooth
+- Demo interaktif (counter, color changer, text animator)
+- Keyboard shortcuts
+- Loading states
+- Error handling
 
 ## Struktur File
 
@@ -79,7 +79,7 @@ Website ini dibuat dengan HTML, CSS, dan JavaScript. Demonstrasi ini menunjukkan
 ```javascript
 // Button click events
 primaryBtn.addEventListener("click", function () {
-  showToast("🎉 Tombol berfungsi dengan sempurna!", "success");
+  showToast("Tombol berfungsi dengan sempurna!", "success");
 });
 ```
 
@@ -96,7 +96,7 @@ nameInput.addEventListener("input", function () {
 
 ```javascript
 // Dynamic content change
-hero.textContent = "🎊 JavaScript membuat website menjadi hidup!";
+hero.textContent = "JavaScript membuat website menjadi hidup!";
 ```
 
 ## Tujuan Pembelajaran

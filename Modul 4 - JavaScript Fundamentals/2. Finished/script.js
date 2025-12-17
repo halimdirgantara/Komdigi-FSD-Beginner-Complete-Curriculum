@@ -355,11 +355,11 @@ function demonstrateJavaScriptBasics() {
 
   // 1. Variables and Data Types
   console.log("1. Variables and Data Types:");
-  let name = "John Doe"; // string
+  let name = "Aiman"; // string
   let age = 25; // number
   let isStudent = true; // boolean
   let hobbies = ["coding", "reading", "gaming"]; // array
-  let person = { name: "John", age: 25 }; // object
+  let person = { name: "Aila", age: 25 }; // object
   let nothing = null; // null
   let notDefined = undefined; // undefined
 

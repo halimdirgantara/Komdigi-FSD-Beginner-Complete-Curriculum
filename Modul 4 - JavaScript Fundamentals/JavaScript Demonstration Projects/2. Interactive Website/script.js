@@ -3,7 +3,7 @@
 
 // Wait for DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("🚀 Interactive Website Loaded Successfully!");
+  console.log("Interactive Website Loaded Successfully!");
 
   // Initialize all interactive features
   initializeButtons();
@@ -18,7 +18,7 @@ function initializeButtons() {
   // Primary Button - Shows notification
   const primaryBtn = document.getElementById("primaryBtn");
   primaryBtn.addEventListener("click", function () {
-    showToast("🎉 Tombol berfungsi dengan sempurna!", "success");
+    showToast("Tombol berfungsi dengan sempurna!", "success");
     this.style.transform = "scale(0.95)";
     setTimeout(() => {
       this.style.transform = "scale(1)";
@@ -30,7 +30,7 @@ function initializeButtons() {
   secondaryBtn.addEventListener("click", function () {
     const hero = document.querySelector(".hero h2");
     const originalText = hero.textContent;
-    hero.textContent = "🎊 JavaScript membuat website menjadi hidup!";
+    hero.textContent = "JavaScript membuat website menjadi hidup!";
     hero.style.color = "#4facfe";
     hero.style.transform = "scale(1.1)";
 
@@ -40,7 +40,7 @@ function initializeButtons() {
       hero.style.transform = "scale(1)";
     }, 2000);
 
-    showToast("✨ Konten berubah secara dinamis!", "success");
+    showToast("Konten berubah secara dinamis!", "success");
   });
 
   // Animate Button - Triggers animations
@@ -57,7 +57,7 @@ function initializeButtons() {
       }, index * 100);
     });
 
-    showToast("🎭 Animasi keren diaktifkan!", "success");
+    showToast("Animasi keren diaktifkan!", "success");
   });
 }
 
@@ -93,12 +93,12 @@ function initializeFormValidation() {
       showLoading();
       setTimeout(() => {
         hideLoading();
-        showToast("✅ Form berhasil dikirim!", "success");
+        showToast("Form berhasil dikirim!", "success");
         form.reset();
         clearAllErrors();
       }, 2000);
     } else {
-      showToast("❌ Silakan perbaiki error di form", "error");
+      showToast("Silakan perbaiki error di form", "error");
     }
   });
 }
@@ -193,7 +193,7 @@ function initializeInteractiveDemo() {
   resetBtn.addEventListener("click", function () {
     counter = 0;
     updateCounter();
-    showToast("🔄 Counter direset!", "success");
+    showToast("Counter direset!", "success");
   });
 
   function updateCounter() {
@@ -226,7 +226,7 @@ function initializeInteractiveDemo() {
     setTimeout(() => {
       colorBox.style.transform = "rotate(0deg) scale(1)";
     }, 500);
-    showToast("🎨 Warna berubah!", "success");
+    showToast("Warna berubah!", "success");
   });
 
   // Text Animator
@@ -249,7 +249,7 @@ function initializeInteractiveDemo() {
       textDisplay.textContent = texts[textIndex];
       textDisplay.style.animation = "fadeIn 0.5s ease-in-out";
     }, 250);
-    showToast("📝 Teks berubah!", "success");
+    showToast("Teks berubah!", "success");
   });
 }
 
@@ -265,18 +265,18 @@ function initializeFeatureCards() {
       switch (feature) {
         case "interaction":
           card.style.animation = "bounce 1s ease-in-out";
-          showToast("🎯 Interaksi berhasil!", "success");
+          showToast("Interaksi berhasil!", "success");
           break;
         case "dynamic":
           const icon = card.querySelector(".feature-icon");
-          icon.textContent = icon.textContent === "✅" ? "🔄" : "✅";
-          showToast("🔄 Konten berubah dinamis!", "success");
+          icon.textContent = icon.textContent === "OK" ? "RESET" : "OK";
+          showToast("Konten berubah dinamis!", "success");
           break;
         case "notification":
-          showToast("🔔 Notifikasi JavaScript!", "warning");
+          showToast("Notifikasi JavaScript!", "warning");
           break;
         case "validation":
-          showToast("✅ Validasi JavaScript aktif!", "success");
+          showToast("Validasi JavaScript aktif!", "success");
           break;
       }
       setTimeout(() => (card.style.animation = ""), 1000);
@@ -359,12 +359,12 @@ document.addEventListener("keydown", function (e) {
 
 // Console welcome message
 console.log(`
-🚀 Welcome to Interactive Website!
-📝 Try these keyboard shortcuts:
+Welcome to Interactive Website!
+Try these keyboard shortcuts:
    - Press 'A' for animations
    - Press 'C' for counter
    - Press 'Escape' to close loading
-🎯 All features are powered by JavaScript!
+All features are powered by JavaScript!
 `);
 
 // Performance monitoring
@@ -372,5 +372,5 @@ const startTime = performance.now();
 window.addEventListener("load", function () {
   const endTime = performance.now();
   const loadTime = endTime - startTime;
-  console.log(`⚡ Page loaded in ${loadTime.toFixed(2)}ms`);
+  console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
 });

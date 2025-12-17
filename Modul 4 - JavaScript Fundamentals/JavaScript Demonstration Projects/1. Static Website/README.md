@@ -6,12 +6,12 @@ Website ini dibuat hanya dengan HTML dan CSS, tanpa JavaScript. Demonstrasi ini 
 
 ## Fitur yang TIDAK Tersedia
 
-- ❌ Interaksi pengguna (klik, hover, input)
-- ❌ Konten dinamis
-- ❌ Notifikasi atau popup
-- ❌ Validasi form real-time
-- ❌ Animasi interaktif
-- ❌ Respons terhadap aksi pengguna
+- Interaksi pengguna (klik, hover, input)
+- Konten dinamis
+- Notifikasi atau popup
+- Validasi form real-time
+- Animasi interaktif
+- Respons terhadap aksi pengguna
 
 ## Struktur File
 

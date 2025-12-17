@@ -1,12 +1,12 @@
 # Final Project - Interactive Personal Profile Website
 
-## 🎯 Overview
+## Overview
 
 Selamat! Anda telah menyelesaikan perjalanan pembelajaran dari Modul 1-5 dan sekarang tiba saatnya untuk menguji kemampuan Anda dalam **Final Project** yang akan mengintegrasikan semua konsep yang telah dipelajari.
 
 Dalam project ini, Anda akan membangun sebuah **Interactive Personal Profile Website** yang tidak hanya menjadi portfolio pribadi, tetapi juga menjadi bukti nyata bahwa Anda telah menguasai fundamental web development.
 
-## 📚 Journey Recap - Dari Modul 1 hingga Final Project
+## Journey Recap - Dari Modul 1 hingga Final Project
 
 ### Modul 1: Full Stack Development & Dasar Pemrograman
 
@@ -28,26 +28,26 @@ Dari konsep dasar JavaScript, Anda akan mengimplementasikan logic yang kompleks 
 
 Kemampuan DOM manipulation yang telah dipelajari akan diuji dalam membuat website yang benar-benar interaktif dengan smooth scrolling, animations, dan user feedback.
 
-## 🎯 Tujuan Project
+## Tujuan Project
 
 **Misi Anda**: Mengubah folder `1. Starter/` yang berisi struktur dasar menjadi website portfolio yang lengkap dan professional di folder `2. Finished/`.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Final Project - Interactive Personal Profile Website/
-├── 1. Starter/                    # 🚀 Mulai dari sini
+├── 1. Starter/                    # Mulai dari sini
 │   ├── index.html                 # Struktur HTML dasar (sudah ada)
 │   ├── styles.css                 # CSS kosong (implementasi Anda)
 │   └── script.js                  # JavaScript kosong (implementasi Anda)
-├── 2. Finished/                   # 🎯 Target akhir (JANGAN DIPUSH!)
+├── 2. Finished/                   # Target akhir (JANGAN DIPUSH!)
 │   ├── index.html                 # HTML lengkap dengan semua fitur
 │   ├── styles.css                 # CSS lengkap dengan animations
 │   └── script.js                  # JavaScript lengkap dengan functionality
 └── Final Project Guide.md         # Panduan detail (referensi)
 ```
 
-## 🛠️ Yang Harus Dikerjakan
+## Yang Harus Dikerjakan
 
 ### Phase 1: HTML Enhancement (30 menit)
 
@@ -56,9 +56,9 @@ Final Project - Interactive Personal Profile Website/
 
 **Tugas**:
 
-- ✅ Struktur HTML sudah lengkap di starter
-- ✅ Semantic elements sudah ada
-- ✅ ✅ **TIDAK PERLU EDIT HTML** - fokus ke CSS & JavaScript
+- Struktur HTML sudah lengkap di starter
+- Semantic elements sudah ada
+- **TIDAK PERLU EDIT HTML** - fokus ke CSS & JavaScript
 
 ### Phase 2: CSS Implementation (2-3 jam)
 
@@ -166,7 +166,7 @@ function initScrollAnimations() {
 }
 ```
 
-## 🎨 Design Requirements
+## Design Requirements
 
 ### Visual Hierarchy
 
@@ -188,11 +188,11 @@ function initScrollAnimations() {
 - **Tablet**: Optimized grid layouts
 - **Desktop**: Full feature experience
 
-## 🧪 Testing Checklist
+## Testing Checklist
 
 Sebelum menganggap project selesai, pastikan:
 
-### ✅ Functionality
+### Functionality
 
 - [ ] Dark mode toggle berfungsi
 - [ ] Mobile menu buka/tutup dengan smooth
@@ -200,7 +200,7 @@ Sebelum menganggap project selesai, pastikan:
 - [ ] Form validation bekerja untuk semua field
 - [ ] Portfolio filtering berfungsi
 
-### ✅ Responsive
+### Responsive
 
 - [ ] Mobile layout (320px - 768px)
 - [ ] Tablet layout (768px - 1024px)
@@ -208,14 +208,14 @@ Sebelum menganggap project selesai, pastikan:
 - [ ] Touch interactions di mobile
 - [ ] Text readable di semua ukuran
 
-### ✅ Performance (OPTIONAL)
+### Performance (OPTIONAL)
 
 - [ ] Page load cepat (< 3 detik)
 - [ ] Animations smooth (60fps)
 - [ ] Tidak ada layout shift
 - [ ] Optimized images
 
-## 🚀 Implementation Strategy
+## Implementation Strategy
 
 ### Step 1: Setup & Planning (15 menit)
 
@@ -259,7 +259,7 @@ Sebelum menganggap project selesai, pastikan:
 3. Optimize performance
 4. Final testing
 
-## 💡 Tips & Tricks
+## Tips & Tricks
 
 ### CSS Tips
 
@@ -282,7 +282,7 @@ Sebelum menganggap project selesai, pastikan:
 - Test responsive design dengan device simulation
 - Validate HTML dan CSS
 
-## 🎯 Success Criteria
+## Success Criteria
 
 Project dianggap berhasil jika:
 
@@ -292,7 +292,7 @@ Project dianggap berhasil jika:
 4. **Clean Code**: Code yang organized dan readable
 5. **Performance**: Loading cepat dan animations smooth
 
-## 🏆 Final Notes
+## Final Notes
 
 Ini adalah **ujian akhir** dari perjalanan pembelajaran Anda. Website yang Anda buat akan menjadi:
 
@@ -300,7 +300,7 @@ Ini adalah **ujian akhir** dari perjalanan pembelajaran Anda. Website yang Anda 
 - **Bukti kemampuan** bahwa Anda menguasai full stack fundamentals
 - **Foundation** untuk belajar framework modern seperti React, Vue, atau Angular
 
-**Good luck! 🚀**
+**Good luck!**
 
 ---
 
