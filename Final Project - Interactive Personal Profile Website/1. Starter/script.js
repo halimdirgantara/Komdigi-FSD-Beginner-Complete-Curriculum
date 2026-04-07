@@ -1,183 +1,330 @@
-// TODO: Implement comprehensive JavaScript functionality
+/**
+ * Final Project - Interactive Personal Profile Website
+ * JavaScript Implementation
+ */
 
-// DOM Elements
-const darkModeToggle = document.getElementById("dark-mode-toggle");
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const contactForm = document.getElementById("contact-form");
-const toast = document.getElementById("toast");
+document.addEventListener('DOMContentLoaded', () => {
+  // --- Data for Dynamic Content ---
+  const skills = [
+    { name: 'HTML5', icon: 'fab fa-html5' },
+    { name: 'CSS3', icon: 'fab fa-css3-alt' },
+    { name: 'JavaScript', icon: 'fab fa-js' },
+    { name: 'React', icon: 'fab fa-react' },
+    { name: 'Node.js', icon: 'fab fa-node-js' },
+    { name: 'Git', icon: 'fab fa-git-alt' },
+    { name: 'UI/UX Design', icon: 'fas fa-paint-brush' },
+    { name: 'Responsive', icon: 'fas fa-mobile-alt' }
+  ];
 
-// Dark Mode Functionality
-function initDarkMode() {
-  // TODO: Implement dark mode toggle functionality
-  // 1. Check for saved theme preference or default to 'light'
-  // 2. Apply theme on page load
-  // 3. Toggle theme when button is clicked
-  // 4. Save theme preference to localStorage
-}
+  const portfolioItems = [
+    {
+      title: 'E-Commerce Platform',
+      category: 'web',
+      image: 'fa-shopping-cart',
+      description: 'A full-featured online store with payment integration.',
+      link: '#'
+    },
+    {
+      title: 'Fitness Tracker App',
+      category: 'mobile',
+      image: 'fa-dumbbell',
+      description: 'Mobile application to track daily workouts and nutrition.',
+      link: '#'
+    },
+    {
+      title: 'Brand Identity Design',
+      category: 'design',
+      image: 'fa-palette',
+      description: 'Complete visual identity for a tech startup.',
+      link: '#'
+    },
+    {
+      title: 'Social Media Dashboard',
+      category: 'web',
+      image: 'fa-chart-line',
+      description: 'Analytics dashboard for social media management.',
+      link: '#'
+    },
+    {
+      title: 'Travel Guide App',
+      category: 'mobile',
+      image: 'fa-plane',
+      description: 'Location-based travel recommendations and maps.',
+      link: '#'
+    },
+    {
+      title: 'Portfolio Website',
+      category: 'web',
+      image: 'fa-user-circle',
+      description: 'Responsive personal portfolio with dark mode.',
+      link: '#'
+    }
+  ];
 
-// Navigation Functionality
-function initNavigation() {
-  // TODO: Implement mobile navigation
-  // 1. Toggle mobile menu when hamburger is clicked
-  // 2. Close mobile menu when clicking on nav links
-  // 3. Smooth scrolling to sections
-  // 4. Active nav link highlighting based on scroll position
-}
+  // --- Initialize Components ---
+  initDarkMode();
+  initNavigation();
+  initDynamicContent();
+  initPortfolioFilter();
+  initFormValidation();
+  initScrollAnimations();
 
-// Skills Data
-const skillsData = [
-  { name: "HTML5", level: 90 },
-  { name: "CSS3", level: 85 },
-  { name: "JavaScript", level: 80 },
-  { name: "React", level: 75 },
-  { name: "Node.js", level: 70 },
-  { name: "Python", level: 65 },
-];
+  // --- 3.1 Dark Mode Toggle ---
+  function initDarkMode() {
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    const icon = toggleBtn.querySelector('i');
 
-// Portfolio Data
-const portfolioData = [
-  {
-    id: 1,
-    title: "E-Commerce Website",
-    description: "Full-stack e-commerce platform with React and Node.js",
-    image: "fas fa-shopping-cart",
-    tags: ["React", "Node.js", "MongoDB"],
-    category: "web",
-  },
-  {
-    id: 2,
-    title: "Mobile Banking App",
-    description:
-      "Secure mobile banking application with biometric authentication",
-    image: "fas fa-mobile-alt",
-    tags: ["React Native", "Firebase", "Security"],
-    category: "mobile",
-  },
-  {
-    id: 3,
-    title: "UI/UX Design System",
-    description: "Comprehensive design system for consistent user experience",
-    image: "fas fa-palette",
-    tags: ["Figma", "Design System", "Prototyping"],
-    category: "design",
-  },
-  {
-    id: 4,
-    title: "Task Management App",
-    description: "Collaborative task management with real-time updates",
-    image: "fas fa-tasks",
-    tags: ["Vue.js", "Socket.io", "PostgreSQL"],
-    category: "web",
-  },
-];
+    // Check saved preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.setAttribute('data-theme', 'dark');
+      icon.className = 'fas fa-sun';
+    }
 
-// Skills Rendering
-function renderSkills() {
-  // TODO: Implement skills rendering
-  // 1. Get skills container element
-  // 2. Loop through skillsData array
-  // 3. Create skill elements with progress bars
-  // 4. Add animation on scroll
-}
+    toggleBtn.addEventListener('click', () => {
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        icon.className = 'fas fa-moon';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        icon.className = 'fas fa-sun';
+      }
+    });
+  }
 
-// Portfolio Rendering
-function renderPortfolio() {
-  // TODO: Implement portfolio rendering
-  // 1. Get portfolio grid container
-  // 2. Loop through portfolioData array
-  // 3. Create portfolio item elements
-  // 4. Add filter functionality
-}
+  // --- 3.2 Mobile Navigation ---
+  function initNavigation() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbar = document.querySelector('.navbar');
 
-// Portfolio Filtering
-function initPortfolioFilter() {
-  // TODO: Implement portfolio filtering
-  // 1. Add event listeners to filter buttons
-  // 2. Filter portfolio items based on category
-  // 3. Update active filter button
-  // 4. Add smooth transitions
-}
+    // Toggle Mobile Menu
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
 
-// Form Validation
-function validateForm() {
-  // TODO: Implement form validation
-  // 1. Get form input elements
-  // 2. Validate each field (required, email format, etc.)
-  // 3. Show error messages for invalid fields
-  // 4. Return true if all validations pass
-}
+    // Close menu on link click
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Handle active state
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
 
-// Form Submission
-function handleFormSubmit(e) {
-  // TODO: Implement form submission
-  // 1. Prevent default form submission
-  // 2. Validate form data
-  // 3. If valid, show success message
-  // 4. Reset form after successful submission
-  // 5. Show toast notification
-}
+        // Close mobile menu
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
 
-// Toast Notification
-function showToast(message) {
-  // TODO: Implement toast notification
-  // 1. Update toast message
-  // 2. Show toast with animation
-  // 3. Hide toast after 3 seconds
-}
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.padding = '0.5rem 0';
+        navbar.style.boxShadow = 'var(--shadow)';
+      } else {
+        navbar.style.padding = '0';
+        navbar.style.boxShadow = 'none';
+      }
+      
+      // Highlight active link on scroll
+      updateActiveLinkOnScroll();
+    });
 
-// Smooth Scrolling
-function initSmoothScrolling() {
-  // TODO: Implement smooth scrolling
-  // 1. Add event listeners to navigation links
-  // 2. Prevent default link behavior
-  // 3. Scroll to target section smoothly
-  // 4. Update active navigation link
-}
+    function updateActiveLinkOnScroll() {
+      const sections = document.querySelectorAll('section');
+      let current = '';
 
-// Scroll Animations
-function initScrollAnimations() {
-  // TODO: Implement scroll animations
-  // 1. Use Intersection Observer API
-  // 2. Add animation classes when elements come into view
-  // 3. Animate skills progress bars
-  // 4. Animate portfolio items
-}
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
 
-// Local Storage
-function saveToLocalStorage(key, data) {
-  // TODO: Implement local storage
-  // 1. Save data to localStorage
-  // 2. Handle JSON serialization
-  // 3. Handle storage errors gracefully
-}
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  }
 
-function loadFromLocalStorage(key) {
-  // TODO: Implement local storage loading
-  // 1. Load data from localStorage
-  // 2. Handle JSON parsing
-  // 3. Return default value if no data found
-}
+  // --- Dynamic Content Generation ---
+  function initDynamicContent() {
+    // Render Skills
+    const skillsGrid = document.querySelector('.skills-grid');
+    skills.forEach(skill => {
+      const skillItem = document.createElement('div');
+      skillItem.className = 'skill-item reveal';
+      skillItem.innerHTML = `
+        <i class="${skill.icon}"></i>
+        <span>${skill.name}</span>
+      `;
+      skillsGrid.appendChild(skillItem);
+    });
 
-// Initialize all functionality
-function init() {
-  // TODO: Initialize all functionality
-  // 1. Call all initialization functions
-  // 2. Set up event listeners
-  // 3. Load saved data from localStorage
-  // 4. Render initial content
-}
+    // Render Portfolio
+    renderPortfolio('all');
+  }
 
-// Event Listeners
-document.addEventListener("DOMContentLoaded", function () {
-  // TODO: Add all event listeners
-  // 1. Dark mode toggle
-  // 2. Mobile navigation
-  // 3. Form submission
-  // 4. Portfolio filtering
-  // 5. Smooth scrolling
-  // 6. Scroll animations
+  function renderPortfolio(filter) {
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+    portfolioGrid.innerHTML = ''; // Clear existing items
+
+    const filteredItems = filter === 'all' 
+      ? portfolioItems 
+      : portfolioItems.filter(item => item.category === filter);
+
+    filteredItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'portfolio-item reveal';
+      card.innerHTML = `
+        <div class="portfolio-img">
+          <i class="fas ${item.image}"></i>
+        </div>
+        <div class="portfolio-info">
+          <span class="portfolio-category">${item.category}</span>
+          <h3 class="portfolio-title">${item.title}</h3>
+          <p>${item.description}</p>
+          <a href="${item.link}" class="portfolio-link">
+            Lihat Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      `;
+      portfolioGrid.appendChild(card);
+    });
+  }
+
+  // --- 3.4 Portfolio Filtering ---
+  function initPortfolioFilter() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter items
+        const filter = btn.getAttribute('data-filter');
+        renderPortfolio(filter);
+        
+        // Trigger reveal for new items
+        setTimeout(initScrollAnimations, 100);
+      });
+    });
+  }
+
+  // --- 3.3 Form Validation & Submission ---
+  function initFormValidation() {
+    const form = document.getElementById('contact-form');
+    const inputs = form.querySelectorAll('input, textarea');
+
+    // Real-time validation
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        validateInput(input);
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      let isValid = true;
+      inputs.forEach(input => {
+        if (!validateInput(input)) {
+          isValid = false;
+        }
+      });
+
+      if (isValid) {
+        // Simulate form submission
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerText;
+        
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Mengirim...';
+
+        setTimeout(() => {
+          showToast('Pesan berhasil dikirim!');
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalText;
+        }, 1500);
+      }
+    });
+
+    function validateInput(input) {
+      const errorSpan = document.getElementById(`${input.id}-error`);
+      let valid = true;
+      let message = '';
+
+      if (input.required && !input.value.trim()) {
+        valid = false;
+        message = 'Field ini wajib diisi';
+      } else if (input.type === 'email' && input.value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(input.value)) {
+          valid = false;
+          message = 'Format email tidak valid';
+        }
+      }
+
+      if (!valid) {
+        errorSpan.innerText = message;
+        input.style.borderColor = '#ef4444';
+      } else {
+        errorSpan.innerText = '';
+        input.style.borderColor = 'var(--border-color)';
+      }
+
+      return valid;
+    }
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const toastMsg = toast.querySelector('.toast-message');
+    
+    toastMsg.innerText = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000);
+  }
+
+  // --- 3.5 Scroll Animations ---
+  function initScrollAnimations() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    const observerOptions = {
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    reveals.forEach(reveal => {
+      observer.observe(reveal);
+    });
+
+    // Also add reveal to section titles
+    document.querySelectorAll('.section-title').forEach(title => {
+      title.classList.add('reveal');
+      observer.observe(title);
+    });
+  }
 });
-
-// Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", init);
